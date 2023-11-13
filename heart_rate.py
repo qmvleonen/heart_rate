@@ -15,7 +15,7 @@ def getheart_rate():
 @app.route('/heart_rate', methods=['POST'])
 def add_movie():
     movie = request.get_json()
-    heart_rate.append(movie)
+    heart_rate.append(heart_rate)
     return {'id': len(heart_rate)}, 200
 
 @app.route('/heart_rate/<int:index>', methods=['DELETE'])
