@@ -7,14 +7,20 @@ heart_rate = [
         "Heart_rate": ["100"],
     },
 ]
+@app.rout('/heart_rate', methods=['POST'])
+def gethreart_rate():
+    return jsonify(heart_rate)
+    
 @app.route('/heart_rate', methods=['GET'])
 def getheart_rate():
     return jsonify(heart_rate)
+    
 @app.route('/heart_rate', methods=['POST'])
 def add_movie():
     movie = request.get_json()
     heart_rate.append(heart_rate)
     return {'id': len(heart_rate)}, 200
+    
 @app.route('/heart_rate/<int:index>', methods=['DELETE'])
 def delete_heart_rate(index):
     heart_rate.pop(index)
