@@ -7,10 +7,6 @@ heart_rate = [
         "Heart_rate": ["100"],
     },
 ]
-@app.rout('/heart_rate', methods=['POST'])
-def gethreart_rate():
-    return jsonify(heart_rate)
-    
 @app.route('/heart_rate', methods=['GET'])
 def getheart_rate():
     return jsonify(heart_rate)
